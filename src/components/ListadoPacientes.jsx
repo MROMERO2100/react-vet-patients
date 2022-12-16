@@ -2,8 +2,10 @@ import React from 'react'
 
 const ListadoPacientes = () => {
     return (
-        <div>
-            <h2>ListadoPacientes</h2>
+        <div className='md:w-1/2 lg:w-3/5'>
+            <h2 className='text-white text-center text-bold text-3xl'>
+                List of Patients Registered
+            </h2>
         </div>
     )
 }
