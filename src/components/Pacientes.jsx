@@ -1,16 +1,11 @@
-import { useState, useEffect } from 'react'
-
 const Pacientes = ({ paciente, setPaciente, deletePaciente }) => {
-
     const { petName, petOwnerName, petOwnerEnmail, petDate, petSymptom, id } = paciente;
-
     const handleDelete = () => {
         const response = confirm('Are you sure to Delete.?');
-
         if (response) {
             deletePaciente(id);
         }
-    }
+    };
 
     return (
         <div className='mx-5 bg-gray-700 shadow-md px-5 py-10 rounded-xl'>

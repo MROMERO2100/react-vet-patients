@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import Pacientes from './Pacientes'
 
 const ListadoPacientes = ({ pacientes, setPaciente, deletePaciente }) => {

@@ -5,5 +5,4 @@ function Header() {
         </h1>
     )
 }
-
 export default Header;

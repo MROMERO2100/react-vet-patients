@@ -9,7 +9,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
     const [petSymptom, setpetSymptom] = useState('');
 
     const [error, setError] = useState(false);
-    const [mesajeError, setmesajeError] = useState('');
+    const [mesajeError, setmesajeError] = useState(false);
 
     useEffect(() => {
         if (Object.keys(paciente).length > 0) {
@@ -52,7 +52,6 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
             const pacienteUpdate = pacientes.map(pacienteState => pacienteState.id === paciente.id ? objPaciente : pacienteState);
             setPacientes(pacienteUpdate);
             setPaciente({});
-
         } else {
             //NEW ENTRY
             objPaciente.id = generarId();
