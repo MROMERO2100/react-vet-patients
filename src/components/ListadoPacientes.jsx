@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import Pacientes from './Pacientes'
 
-const ListadoPacientes = ({ paciente }) => {
+const ListadoPacientes = ({ pacientes, setPaciente, deletePaciente }) => {
     return (
         <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
-            {paciente && paciente.length ?
+            {pacientes && pacientes.length ?
                 (
                     <>
                         <h2 className='text-white text-center text-bold text-3xl'>
@@ -14,10 +14,12 @@ const ListadoPacientes = ({ paciente }) => {
                             Check the List of Patients and made a {''}
                             <span className='text-indigo-600 font-bold'>Follow UP.!</span>
                         </p>
-                        {paciente.map(paciente => (
+                        {pacientes.map(paciente => (
                             <Pacientes
                                 key={paciente.id}
                                 paciente={paciente}
+                                setPaciente={setPaciente}
+                                deletePaciente={deletePaciente}
                             />
                         ))}
                     </>
